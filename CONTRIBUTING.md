@@ -2,7 +2,9 @@
 
 ## commenting
 
-- 日本語か英語の何れかを使う, 英語を推奨する
+- 日本語か英語の何れかを使う
+  - PR のタイトルや会話文には日本語を推奨
+  - コメントや commit message には英語を推奨
 - "数日後の自分" が見て理解できる内容まで書く
 - 冗長過ぎる表現は避け, 比較的コンパクトな表現を用いる
 - Git の commit message は [Conventional Commits](https://www.conventionalcommits.org/ja/v1.0.0/) に従う
