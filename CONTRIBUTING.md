@@ -65,6 +65,16 @@ pieces   +----------------------------+---------------+--...
 - Rules にて branch の保護と制約付け
 - GitHub Actions で PR の検査 (may)
 
+PR を生やす際には以下に従う:
+
+- title は Conventional Commits の書式に従い, 内容は日本語で簡潔に記す
+- テンプレートに従い, 必要な情報を記す
+
+Issue, Discussions を生やす際には以下に従う:
+
+- title は日本語で簡潔に記す
+- テンプレートは設けないが, 必要な情報を記す
+
 ## environment
 
 - POSIX 準拠のシステムを推奨するが, この限りではない
