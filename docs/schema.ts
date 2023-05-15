@@ -23,3 +23,15 @@ export const Piece = z.object({
   // 情報源へのリンク
   sources: z.string().url().array(),
 });
+
+// 設定を保持するオブジェクト
+export type Settings = {
+  /* not defined */
+};
+
+// リーダーボードを保持するオブジェクト
+export type Leaderboard = {
+  current: LbEntry[];
+
+  push: (e: LbEntry) => void;
+};
