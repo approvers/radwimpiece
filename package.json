@@ -14,5 +14,8 @@
   },
   "dependencies": {},
   "private": true,
-  "devDependencies": {}
+  "devDependencies": {
+    "rome": "^12.1.0",
+    "typescript": "^5.0.4"
+  }
 }
