@@ -12,10 +12,15 @@
     "node": "^18.16.0",
     "pnpm": "^8.5.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "private": true,
   "devDependencies": {
     "rome": "^12.1.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4"
   }
 }
