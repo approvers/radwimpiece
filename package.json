@@ -18,9 +18,9 @@
   },
   "private": true,
   "devDependencies": {
-    "rome": "^12.1.0",
-    "typescript": "^5.0.4",
     "@types/react": "^18.2.6",
-    "@types/react-dom": "^18.2.4"
+    "@types/react-dom": "^18.2.4",
+    "rome": "^12.1.0",
+    "typescript": "^5.0.4"
   }
 }
