@@ -38,18 +38,17 @@ jobs:
     - name: install deps
       run: pnpm install --frozen-lockfile --strict-peer-dependencies
 
-    - name: check
-      run: pnpm check
-      continue-on-error: true
+    - name: rome format
+      run: pnpm rome format src
 
-    - name: fmt
-      run: pnpm fmt
-      continue-on-error: true
+    - name: rome check
+      run: pnpm rome check src
+
+    - name: tsc check
+      run: pnpm tsc
 
     - name: build
-      run: pnpm build
-      continue-on-error: true
+      run: pnpm vite build
 
     - name: test
-      run: pnpm test
-      continue-on-error: true
+      run: pnpm vitest run

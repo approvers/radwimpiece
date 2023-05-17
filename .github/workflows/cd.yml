@@ -25,17 +25,20 @@ jobs:
     - name: install deps
       run: pnpm install --frozen-lockfile --strict-peer-dependencies
 
-    - name: check
-      run: pnpm check
+    - name: rome format
+      run: pnpm rome format src
 
-    - name: fmt
-      run: pnpm fmt
+    - name: rome check
+      run: pnpm rome check src
+
+    - name: tsc check
+      run: pnpm tsc
 
     - name: build
-      run: pnpm build
+      run: pnpm vite build
 
     - name: test
-      run: pnpm test
+      run: pnpm vitest run
 
     - name: pick artifacts
       run: mv dist ..
