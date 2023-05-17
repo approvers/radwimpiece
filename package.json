@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "check": "rome check src && tsc",
     "fmt": "rome format --write src",
     "check": "run-p -cls check:*",
     "check:rome": "rome check src",
