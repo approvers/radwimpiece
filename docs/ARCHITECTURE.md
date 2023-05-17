@@ -46,7 +46,7 @@ global { settings: dyn Settings, leaderboard: dyn LeaderBoard }
 ### `launch.params`
 
 ゲームシステムに影響を与えるパラメータ群. 俗に難易度設定などとも言う.
-`global.settings` と比較するとこれは遊び心地やプラットフォーム毎の調整なのに対し, これはゲームのシステム或いは核心に対する調整であることが違う.
+`global.settings` は遊び心地やプラットフォーム毎の調整なのに対し, これはゲームのシステム或いは核心に対する調整であることが違う.
 
 ### `ingame.pieces`
 
