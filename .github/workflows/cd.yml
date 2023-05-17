@@ -15,10 +15,12 @@ jobs:
     - name: init node
       uses: actions/setup-node@v3
       with:
-        node-version: lts
+        node-version: 18
 
     - name: init pnpm
       uses: pnpm/action-setup@v2
+      with:
+        version: 8
 
     - name: install deps
       run: pnpm install --frozen-lockfile --strict-peer-dependencies
