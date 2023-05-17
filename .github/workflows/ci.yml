@@ -33,7 +33,7 @@ jobs:
       with:
         path: ${{ steps.pnpm-store.outputs.PATH }}
         key: pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-        restore_keys: pnpm-store-
+        restore-keys: pnpm-store-
 
     - name: install deps
       run: pnpm install --frozen-lockfile --strict-peer-dependencies
