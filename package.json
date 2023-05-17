@@ -3,7 +3,13 @@
   "name": "radwimpiece",
   "version": "0.0.0",
   "license": "",
-  "scripts": {},
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "check": "vite check && tsc --noEmit",
+    "fmt": "rome format --write src",
+    "test": "vitest"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
