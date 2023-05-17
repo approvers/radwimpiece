@@ -6,9 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "check": "vite check && tsc --noEmit",
+    "check": "rome check src && tsc",
     "fmt": "rome format --write src",
-    "test": "vitest"
+    "check": "run-p -cls check:*",
+    "check:rome": "rome check src",
+    "check:tsc": "tsc",
+    "test": "vitest run"
   },
   "dependencies": {
     "react": "^18.2.0",
