@@ -3,10 +3,6 @@
   "name": "radwimpiece",
   "version": "0.0.0",
   "license": "",
-  "authors": [
-    "Raiga SASAYAMA <raiga0310brilio@gmail.com>",
-    "Nanai Jua <me@n7i.dev>"
-  ],
   "scripts": {},
   "dependencies": {
     "react": "^18.2.0",
