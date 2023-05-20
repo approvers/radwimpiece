@@ -1,0 +1,61 @@
+name: cd
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  cd:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+
+    - name: init node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: init pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: 8
+
+    - name: install deps
+      run: pnpm install --frozen-lockfile --strict-peer-dependencies
+
+    - name: rome format
+      run: pnpm rome format src
+
+    - name: rome check
+      run: pnpm rome check src
+
+    - name: tsc check
+      run: pnpm tsc
+
+    - name: build
+      run: pnpm vite build
+
+    - name: test
+      run: pnpm vitest run
+
+    - name: pick artifacts
+      run: mv dist ..
+
+    - name: checkout to deploy area
+      uses: actions/checkout@v3
+      with:
+        ref: public
+
+    - name: publish artifacts
+      run: |
+        rm -r *
+        mv ../dist/* .
+
+        git config user.name  "actions-user"
+        git config user.email "action@github.com"
+
+        git add -A
+        git commit -m "publish artifacts from ${{ format('{0}@{1}', github.repository, github.sha) }}"
+        git push
