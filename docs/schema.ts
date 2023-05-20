@@ -1,3 +1,4 @@
+// @ts-ignore: temporally unavailable
 import { z } from "zod";
 
 // radwimpiece, radwimps / piece なので言語ごとの断片情報は "piece" である
@@ -34,4 +35,8 @@ export type Leaderboard = {
   current: LbEntry[];
 
   push: (e: LbEntry) => void;
+};
+
+type LbEntry = {
+  /* not defined */
 };
