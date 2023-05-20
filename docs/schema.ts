@@ -1,4 +1,3 @@
-// @ts-ignore: temporally unavailable
 import { z } from "zod";
 
 // radwimpiece, radwimps / piece なので言語ごとの断片情報は "piece" である
