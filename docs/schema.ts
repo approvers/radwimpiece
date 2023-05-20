@@ -35,3 +35,7 @@ export type Leaderboard = {
 
   push: (e: LbEntry) => void;
 };
+
+type LbEntry = {
+  /* not defined */
+};
