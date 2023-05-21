@@ -10,9 +10,9 @@ const Game = () => {
   return (
     <div className="Game">
       <h1>Game</h1>
-      {screenState === "launch" && <>Launch Screen</>}
-      {screenState === "ingame" && <>In Game</>}
-      {screenState === "result" && <>Result Screen</>}
+      {screenState === "launch" && <button type="button" onClick={() => setScreenState("ingame")}>Launch Screen</button>}
+      {screenState === "ingame" && <button type="button" onClick={() => setScreenState("result")}>In Game</button>}
+      {screenState === "result" && <button type="button" onClick={() => setScreenState("launch")}>Result Screen</button>}
     </div>
   );
 };
