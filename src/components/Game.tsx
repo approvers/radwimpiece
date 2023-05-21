@@ -1,8 +1,6 @@
-import { z } from "zod";
 import { useState } from "react";
 
-type ScreenState = z.TypeOf<typeof State>;
-const State = z.enum(["launch", "ingame", "result"]);
+type ScreenState = "launch" | "ingame" | "result";
 
 const Game = () => {
   const [screenState, setScreenState] = useState<ScreenState>("launch");
@@ -10,9 +8,21 @@ const Game = () => {
   return (
     <div className="Game">
       <h1>Game</h1>
-      {screenState === "launch" && <button type="button" onClick={() => setScreenState("ingame")}>Launch Screen</button>}
-      {screenState === "ingame" && <button type="button" onClick={() => setScreenState("result")}>In Game</button>}
-      {screenState === "result" && <button type="button" onClick={() => setScreenState("launch")}>Result Screen</button>}
+      {screenState === "launch" && (
+        <button type="button" onClick={() => setScreenState("ingame")}>
+          Launch Screen
+        </button>
+      )}
+      {screenState === "ingame" && (
+        <button type="button" onClick={() => setScreenState("result")}>
+          In Game
+        </button>
+      )}
+      {screenState === "result" && (
+        <button type="button" onClick={() => setScreenState("launch")}>
+          Result Screen
+        </button>
+      )}
     </div>
   );
 };
